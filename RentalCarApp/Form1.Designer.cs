@@ -38,6 +38,7 @@
             this.lblDateReturned = new System.Windows.Forms.Label();
             this.dtpDateReturned = new System.Windows.Forms.DateTimePicker();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblStrip = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblHeading
@@ -54,7 +55,7 @@
             // 
             this.lblCName.AutoSize = true;
             this.lblCName.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCName.Location = new System.Drawing.Point(29, 107);
+            this.lblCName.Location = new System.Drawing.Point(29, 122);
             this.lblCName.Name = "lblCName";
             this.lblCName.Size = new System.Drawing.Size(133, 32);
             this.lblCName.TabIndex = 1;
@@ -63,9 +64,9 @@
             // txtCName
             // 
             this.txtCName.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCName.Location = new System.Drawing.Point(32, 151);
+            this.txtCName.Location = new System.Drawing.Point(35, 157);
             this.txtCName.Name = "txtCName";
-            this.txtCName.Size = new System.Drawing.Size(249, 31);
+            this.txtCName.Size = new System.Drawing.Size(246, 31);
             this.txtCName.TabIndex = 2;
             // 
             // lblCarRented
@@ -117,7 +118,7 @@
             // 
             this.lblDateReturned.AutoSize = true;
             this.lblDateReturned.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateReturned.Location = new System.Drawing.Point(482, 213);
+            this.lblDateReturned.Location = new System.Drawing.Point(517, 213);
             this.lblDateReturned.Name = "lblDateReturned";
             this.lblDateReturned.Size = new System.Drawing.Size(121, 32);
             this.lblDateReturned.TabIndex = 7;
@@ -126,7 +127,7 @@
             // dtpDateReturned
             // 
             this.dtpDateReturned.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateReturned.Location = new System.Drawing.Point(488, 248);
+            this.dtpDateReturned.Location = new System.Drawing.Point(523, 248);
             this.dtpDateReturned.Name = "dtpDateReturned";
             this.dtpDateReturned.Size = new System.Drawing.Size(249, 31);
             this.dtpDateReturned.TabIndex = 8;
@@ -134,18 +135,30 @@
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(488, 292);
+            this.btnSubmit.Location = new System.Drawing.Point(523, 292);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(249, 96);
             this.btnSubmit.TabIndex = 9;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // lblStrip
+            // 
+            this.lblStrip.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblStrip.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStrip.Location = new System.Drawing.Point(32, 202);
+            this.lblStrip.Name = "lblStrip";
+            this.lblStrip.Size = new System.Drawing.Size(740, 3);
+            this.lblStrip.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblStrip);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dtpDateReturned);
             this.Controls.Add(this.lblDateReturned);
@@ -156,7 +169,9 @@
             this.Controls.Add(this.txtCName);
             this.Controls.Add(this.lblCName);
             this.Controls.Add(this.lblHeading);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Rental Car System";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,6 +190,7 @@
         private System.Windows.Forms.Label lblDateReturned;
         private System.Windows.Forms.DateTimePicker dtpDateReturned;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label lblStrip;
     }
 }
 
