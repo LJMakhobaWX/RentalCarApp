@@ -39,6 +39,8 @@
             this.dtpDateReturned = new System.Windows.Forms.DateTimePicker();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblStrip = new System.Windows.Forms.Label();
+            this.lblCost = new System.Windows.Forms.Label();
+            this.txtCost = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblHeading
@@ -153,11 +155,31 @@
             this.lblStrip.Size = new System.Drawing.Size(740, 3);
             this.lblStrip.TabIndex = 10;
             // 
+            // lblCost
+            // 
+            this.lblCost.AutoSize = true;
+            this.lblCost.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCost.Location = new System.Drawing.Point(517, 122);
+            this.lblCost.Name = "lblCost";
+            this.lblCost.Size = new System.Drawing.Size(48, 32);
+            this.lblCost.TabIndex = 11;
+            this.lblCost.Text = "Cost";
+            // 
+            // txtCost
+            // 
+            this.txtCost.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.Location = new System.Drawing.Point(523, 157);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(246, 31);
+            this.txtCost.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCost);
+            this.Controls.Add(this.lblCost);
             this.Controls.Add(this.lblStrip);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dtpDateReturned);
@@ -191,6 +213,8 @@
         private System.Windows.Forms.DateTimePicker dtpDateReturned;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblStrip;
+        private System.Windows.Forms.Label lblCost;
+        private System.Windows.Forms.TextBox txtCost;
     }
 }
 
