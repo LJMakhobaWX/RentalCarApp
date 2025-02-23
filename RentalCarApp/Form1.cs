@@ -19,26 +19,38 @@ namespace RentalCarApp
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            /*MessageBox.Show($"Thank you {txtCName.Text} for renting"+'\n'+$"Pick up date:{dtpDateRented.Text}"+'\n'+$"Vehicle return date:{dtpDateReturned.Text}"+'\n'+$"Vehicle rented:{cmbTypeOfCar.Text}");*/
-            String CustomerName = txtCName.Text;
-            var DateRented = dtpDateRented.Value;
-            var DateReturned = dtpDateReturned.Value;
-            var TypeOfCar = cmbTypeOfCar.SelectedItem.ToString();
-            double Cost = Convert.ToDouble(txtCost.Text);
-
-            if(string.IsNullOrWhiteSpace(CustomerName)|| string.IsNullOrWhiteSpace(TypeOfCar))
+            try
             {
-                MessageBox.Show("Please fill in all fields");
-                return;
-            }
+                /*MessageBox.Show($"Thank you {txtCName.Text} for renting"+'\n'+$"Pick up date:{dtpDateRented.Text}"+'\n'+$"Vehicle return date:{dtpDateReturned.Text}"+'\n'+$"Vehicle rented:{cmbTypeOfCar.Text}");*/
+                String CustomerName = txtCName.Text;
+                var DateRented = dtpDateRented.Value;
+                var DateReturned = dtpDateReturned.Value;
+                var TypeOfCar = cmbTypeOfCar.SelectedItem.ToString();
+                double Cost = Convert.ToDouble(txtCost.Text);
+                var isValid = true;
 
-            if (DateRented > DateReturned)
+                if (string.IsNullOrWhiteSpace(CustomerName) || string.IsNullOrWhiteSpace(TypeOfCar))
+                {
+                    isValid = false;
+                    MessageBox.Show("Please fill in all fields");
+                }
+
+                if (DateRented > DateReturned)
+                {
+                    isValid = false;
+                    MessageBox.Show("Invalid date selection");
+                }
+
+                if (isValid == true)
+                {
+                    MessageBox.Show($"Thank you {CustomerName} for renting with us!\n\r" + $"Pick up date: {DateRented}\n\r" + $"Vehicle return date: {DateReturned}\n\r" + $"Vehicle rented: {TypeOfCar}\n" + $"Cost: {Cost}\n" + $"Thank you for your support!!");
+                }
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid date selection");
-                return;
+                MessageBox.Show(ex.Message);
+                //throw;
             }
-
-            MessageBox.Show($"Thank you {CustomerName} for renting with us!\n\r"+$"Pick up date: {DateRented}\n\r"+$"Vehicle return date: {DateReturned}\n\r"+$"Vehicle rented: {TypeOfCar}\n"+$"Cost: {Cost}\n"+$"Thank you for your support!!");
         }
     }
 }
