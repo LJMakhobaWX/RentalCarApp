@@ -104,13 +104,6 @@
             this.cmbTypeOfCar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTypeOfCar.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTypeOfCar.FormattingEnabled = true;
-            this.cmbTypeOfCar.Items.AddRange(new object[] {
-            "Toyota",
-            "Kia ",
-            "Mercedes Benz",
-            "BMW",
-            "Ford",
-            "VW"});
             this.cmbTypeOfCar.Location = new System.Drawing.Point(32, 357);
             this.cmbTypeOfCar.Name = "cmbTypeOfCar";
             this.cmbTypeOfCar.Size = new System.Drawing.Size(249, 31);
