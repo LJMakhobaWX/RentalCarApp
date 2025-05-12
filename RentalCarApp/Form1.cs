@@ -74,5 +74,9 @@ namespace RentalCarApp
                 //throw;
             }
         }
+
+        private class CarRentalEntities
+        {
+        }
     }
 }
